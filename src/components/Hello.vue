@@ -3,7 +3,7 @@
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
     <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
+      <li><i class="fa fa-viacoin"></i><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
       <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
       <li><a href="https://gitter.im/vuejs/vue" target="_blank">Gitter Chat</a></li>
       <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
@@ -17,18 +17,25 @@
       <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
     </ul>
+    <vue-button btn-text="Read more" btn-class="fa fa-align-left"></vue-button>
+    <vue-button btn-text="Read more" btn-class="fa fa-align-left"></vue-button>
   </div>
 </template>
 
 <script>
+import Button from './Button'
+
 export default {
   name: 'hello',
   data() {
     return {
       msg: 'Welcome to Your Vue.js PWA',
-    };
+    }
   },
-};
+  components: {
+    'vue-button': Button,
+  },
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
